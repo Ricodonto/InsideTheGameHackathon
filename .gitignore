@@ -6,3 +6,4 @@ __pycache__/
 .env
 *.pyc
 data/**/tracking.csv
+.venv/
