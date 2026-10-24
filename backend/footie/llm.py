@@ -34,6 +34,8 @@ class LLMClient:
         self.model = model
         self.provider = provider
         self.sem = asyncio.Semaphore(max_concurrency)
+        # gpt-oss and o-series models reason before answering and need different parameters.
+        self.reasoning = any(tag in model for tag in ("gpt-oss", "o1", "o3", "o4"))
 
     @classmethod
     def from_env(cls) -> "LLMClient | None":
@@ -55,8 +57,10 @@ class LLMClient:
             if key:
                 from openai import AsyncOpenAI
 
-                client = AsyncOpenAI(base_url=os.getenv("OPENAI_BASE_URL") or None, api_key=key, timeout=12.0)
-                return cls(client, os.getenv("OPENAI_MODEL", "gpt-4o-mini"), "OpenAI-compatible")
+                base_url = os.getenv("OPENAI_BASE_URL") or None
+                client = AsyncOpenAI(base_url=base_url, api_key=key, timeout=12.0)
+                provider = "Groq" if base_url and "groq.com" in base_url else "OpenAI-compatible"
+                return cls(client, os.getenv("OPENAI_MODEL", "gpt-4o-mini"), provider)
         except Exception as exc:
             log.warning("LLM disabled: %s", exc)
         return None
@@ -64,6 +68,14 @@ class LLMClient:
     async def complete_json(self, system: str, user: str, max_tokens: int = 300) -> dict:
         messages = [{"role": "system", "content": system}, {"role": "user", "content": user}]
         async with self.sem:
+            if self.reasoning:
+                # Reasoning models think before answering; keep the thinking short and leave room for the answer.
+                resp = await self.client.chat.completions.create(
+                    model=self.model, messages=messages, response_format={"type": "json_object"},
+                    max_completion_tokens=max_tokens * 4, reasoning_effort="low",
+                )
+                text = resp.choices[0].message.content or "{}"
+                return json.loads(text)
             try:
                 resp = await self.client.chat.completions.create(
                     model=self.model, messages=messages, response_format={"type": "json_object"},

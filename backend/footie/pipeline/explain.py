@@ -284,11 +284,13 @@ PERSONAS = {
 SYSTEM_PROMPT = """You write on-screen graphics text for a live football broadcast.
 Rules:
 - Use ONLY the facts and reasons provided. Never invent players, numbers, events or history.
+- Copy every number exactly as given. Do not round or change it.
+- The match is still in progress unless the facts say it has finished. Never say a team has won.
 - Explain why the moment matters, not only what happened.
 - Write in {language}.
 - Audience: {persona}
 - {fan}
-Return a JSON object: {{"headline": "<max 8 words>", "body": "<the explanation>"}}"""
+Return only a JSON object: {{"headline": "<max 8 words>", "body": "<the explanation>"}}"""
 
 
 def _language_name(code: str) -> str:
@@ -317,7 +319,9 @@ class Narrator:
     def _system(self, profile, ctx: NameContext) -> str:
         persona = PERSONAS.get(profile.mode, PERSONAS["casual"]).format(
             player=ctx.player(profile.player), metric=profile.metric or "speed")
-        fan = (f"The viewer supports {ctx.club_by_short.get(profile.club, profile.club)}; frame the moment from their point of view."
+        club = ctx.club_by_short.get(profile.club, profile.club)
+        fan = (f"The viewer is a {club} fan. Say plainly whether this moment is good or bad news for {club}: "
+               f"pleased if it helps {club}, sympathetic if it hurts them. Never confuse {club} with the other team."
                if profile.club else "Stay neutral between the two clubs.")
         return SYSTEM_PROMPT.format(language=_language_name(profile.language), persona=persona, fan=fan)
 
@@ -359,7 +363,7 @@ class Narrator:
         )
         user = json.dumps({"question": question, "match": context}, ensure_ascii=False)
         try:
-            out = await self.llm.complete_json(system, user, max_tokens=500)
+            out = await self.llm.complete_json(system, user, max_tokens=350)
             return {"answer": out.get("answer", ""), "cites": out.get("cites", []), "source": "llm"}
         except Exception as exc:
             log.warning("LLM answer failed: %s", exc)
@@ -371,7 +375,7 @@ def _readable_facts(facts: dict, ctx: NameContext) -> dict:
     for k, v in facts.items():
         if k in ("scorer", "shooter", "assist", "player", "passer", "recipient") and isinstance(v, str):
             out[k] = ctx.full_names.get(v, v)
-        elif k in ("stats", "star", "key_moments"):
+        elif k in ("stats", "star", "key_moments", "opp_momentum", "seq_start", "high_regain", "lead_before"):
             continue
         else:
             out[k] = v

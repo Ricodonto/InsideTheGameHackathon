@@ -85,7 +85,11 @@ class MatchSession:
         return out
 
     def ask_context(self, profile: Profile) -> dict:
-        """Compact, grounded match context for 'Ask the match'."""
+        """Compact, grounded match context for 'Ask the match'.
+
+        Kept small on purpose: free-tier model APIs cap tokens per minute, and the
+        "why" sentences already carry the meaning of each moment's raw facts.
+        """
         state = self.state()
         moments = []
         for ins in self.insights.values():
@@ -96,15 +100,31 @@ class MatchSession:
                     "kind": ins["kind"],
                     "team": self.ctx.team(ins["side"]) if ins["side"] else None,
                     "players": [self.ctx.full_names.get(p, p) for p in ins["players"]],
-                    "facts": {k: v for k, v in ins["facts"].items() if not isinstance(v, (dict, list))},
                     "why": [tr("en", c, **p) for c, p in reasons(ins, self.ctx)],
                 })
-        players = state.pop("players")
+        players = {
+            pid: {
+                "name": p["name"],
+                "team": self.ctx.team(p["side"]),
+                "minutes": p["minutes"],
+                "goals": p["goals"],
+                "assists": p["assists"],
+                "shots": p["shots"],
+                "xg": p["xg"],
+                "pass_accuracy_pct": p["pass_accuracy_pct"],
+                "ball_wins": p["tackles"] + p["interceptions"],
+                "distance_km": p["distance_km"],
+                "top_speed_kmh": p["top_speed_kmh"],
+            }
+            for pid, p in state.pop("players").items()
+            if p["minutes"] > 0
+        }
         state.pop("series", None)
+        state.pop("on_pitch", None)
         return {
             "home": self.match.home.name,
             "away": self.match.away.name,
             "state": state,
-            "key_moments": moments[-25:],
+            "key_moments": moments[-20:],
             "players": players,
         }
