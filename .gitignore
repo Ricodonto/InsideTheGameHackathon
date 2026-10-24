@@ -1,0 +1,8 @@
+node_modules/
+frontend/dist/
+backend/.cache/
+__pycache__/
+.pytest_cache/
+.env
+*.pyc
+data/**/tracking.csv

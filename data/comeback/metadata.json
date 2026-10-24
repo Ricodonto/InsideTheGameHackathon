@@ -1,0 +1,573 @@
+{
+  "match_id": "comeback-29",
+  "seed": 29,
+  "pitch": {
+    "length": 105.0,
+    "width": 68.0
+  },
+  "home": {
+    "id": "northbridge",
+    "name": "Northbridge FC",
+    "short": "NBR",
+    "primary": "#1b3a8f",
+    "secondary": "#8fd3ff",
+    "formation": "4-3-3",
+    "press": 0.78,
+    "directness": 0.35,
+    "strength": 0.64,
+    "players": [
+      {
+        "id": "NBR-1",
+        "name": "Felix Fontaine",
+        "short": "F. Fontaine",
+        "number": 1,
+        "position": "GK",
+        "pace": 0.34,
+        "passing": 0.51,
+        "shooting": 0.2,
+        "defending": 0.74,
+        "stamina": 0.8,
+        "star": false
+      },
+      {
+        "id": "NBR-2",
+        "name": "Ade Achebe",
+        "short": "A. Achebe",
+        "number": 2,
+        "position": "RB",
+        "pace": 0.79,
+        "passing": 0.61,
+        "shooting": 0.38,
+        "defending": 0.76,
+        "stamina": 0.77,
+        "star": false
+      },
+      {
+        "id": "NBR-5",
+        "name": "Ruben Wren",
+        "short": "R. Wren",
+        "number": 5,
+        "position": "CB",
+        "pace": 0.54,
+        "passing": 0.64,
+        "shooting": 0.24,
+        "defending": 0.91,
+        "stamina": 0.62,
+        "star": false
+      },
+      {
+        "id": "NBR-6",
+        "name": "Jakub Eze",
+        "short": "J. Eze",
+        "number": 6,
+        "position": "CB",
+        "pace": 0.54,
+        "passing": 0.51,
+        "shooting": 0.22,
+        "defending": 0.79,
+        "stamina": 0.74,
+        "star": false
+      },
+      {
+        "id": "NBR-3",
+        "name": "Ezra Coulter",
+        "short": "E. Coulter",
+        "number": 3,
+        "position": "LB",
+        "pace": 0.73,
+        "passing": 0.66,
+        "shooting": 0.38,
+        "defending": 0.79,
+        "stamina": 0.59,
+        "star": false
+      },
+      {
+        "id": "NBR-4",
+        "name": "Wilf Navarro",
+        "short": "W. Navarro",
+        "number": 4,
+        "position": "DM",
+        "pace": 0.57,
+        "passing": 0.81,
+        "shooting": 0.39,
+        "defending": 0.83,
+        "stamina": 0.92,
+        "star": false
+      },
+      {
+        "id": "NBR-8",
+        "name": "Callum Marchetti",
+        "short": "C. Marchetti",
+        "number": 8,
+        "position": "CM",
+        "pace": 0.63,
+        "passing": 0.9,
+        "shooting": 0.58,
+        "defending": 0.55,
+        "stamina": 0.7,
+        "star": false
+      },
+      {
+        "id": "NBR-10",
+        "name": "Viktor Rinaldi",
+        "short": "V. Rinaldi",
+        "number": 10,
+        "position": "CM",
+        "pace": 0.73,
+        "passing": 0.86,
+        "shooting": 0.61,
+        "defending": 0.61,
+        "stamina": 0.7,
+        "star": false
+      },
+      {
+        "id": "NBR-7",
+        "name": "Elias Mensah",
+        "short": "E. Mensah",
+        "number": 7,
+        "position": "RW",
+        "pace": 0.89,
+        "passing": 0.82,
+        "shooting": 0.74,
+        "defending": 0.39,
+        "stamina": 0.91,
+        "star": false
+      },
+      {
+        "id": "NBR-9",
+        "name": "Kofi Thorne",
+        "short": "K. Thorne",
+        "number": 9,
+        "position": "ST",
+        "pace": 0.9299999999999999,
+        "passing": 0.77,
+        "shooting": 0.97,
+        "defending": 0.2,
+        "stamina": 0.69,
+        "star": true
+      },
+      {
+        "id": "NBR-11",
+        "name": "Zane Lindqvist",
+        "short": "Z. Lindqvist",
+        "number": 11,
+        "position": "LW",
+        "pace": 0.92,
+        "passing": 0.74,
+        "shooting": 0.76,
+        "defending": 0.33,
+        "stamina": 0.72,
+        "star": false
+      },
+      {
+        "id": "NBR-13",
+        "name": "Reece Fairbairn",
+        "short": "R. Fairbairn",
+        "number": 13,
+        "position": "GK",
+        "pace": 0.4,
+        "passing": 0.65,
+        "shooting": 0.21,
+        "defending": 0.75,
+        "stamina": 0.57,
+        "star": false
+      },
+      {
+        "id": "NBR-15",
+        "name": "Leon Varga",
+        "short": "L. Varga",
+        "number": 15,
+        "position": "CB",
+        "pace": 0.52,
+        "passing": 0.65,
+        "shooting": 0.31,
+        "defending": 0.76,
+        "stamina": 0.59,
+        "star": false
+      },
+      {
+        "id": "NBR-16",
+        "name": "Emil Petrov",
+        "short": "E. Petrov",
+        "number": 16,
+        "position": "CM",
+        "pace": 0.64,
+        "passing": 0.92,
+        "shooting": 0.54,
+        "defending": 0.67,
+        "stamina": 0.66,
+        "star": false
+      },
+      {
+        "id": "NBR-17",
+        "name": "Zane Delacroix",
+        "short": "Z. Delacroix",
+        "number": 17,
+        "position": "RW",
+        "pace": 0.91,
+        "passing": 0.74,
+        "shooting": 0.69,
+        "defending": 0.38,
+        "stamina": 0.89,
+        "star": false
+      },
+      {
+        "id": "NBR-19",
+        "name": "Hugo Pellegrini",
+        "short": "H. Pellegrini",
+        "number": 19,
+        "position": "ST",
+        "pace": 0.85,
+        "passing": 0.7,
+        "shooting": 0.82,
+        "defending": 0.32,
+        "stamina": 0.68,
+        "star": false
+      }
+    ]
+  },
+  "away": {
+    "id": "riverside",
+    "name": "Riverside Athletic",
+    "short": "RVA",
+    "primary": "#c8202f",
+    "secondary": "#ffffff",
+    "formation": "4-2-3-1",
+    "press": 0.55,
+    "directness": 0.5,
+    "strength": 0.6,
+    "players": [
+      {
+        "id": "RVA-1",
+        "name": "Wes Fontaine",
+        "short": "W. Fontaine",
+        "number": 1,
+        "position": "GK",
+        "pace": 0.35,
+        "passing": 0.56,
+        "shooting": 0.2,
+        "defending": 0.78,
+        "stamina": 0.87,
+        "star": false
+      },
+      {
+        "id": "RVA-2",
+        "name": "Malik Navarro",
+        "short": "M. Navarro",
+        "number": 2,
+        "position": "RB",
+        "pace": 0.81,
+        "passing": 0.57,
+        "shooting": 0.38,
+        "defending": 0.77,
+        "stamina": 0.61,
+        "star": false
+      },
+      {
+        "id": "RVA-5",
+        "name": "Oskar Petrov",
+        "short": "O. Petrov",
+        "number": 5,
+        "position": "CB",
+        "pace": 0.51,
+        "passing": 0.54,
+        "shooting": 0.34,
+        "defending": 0.88,
+        "stamina": 0.71,
+        "star": false
+      },
+      {
+        "id": "RVA-6",
+        "name": "Kai Juma",
+        "short": "K. Juma",
+        "number": 6,
+        "position": "CB",
+        "pace": 0.51,
+        "passing": 0.56,
+        "shooting": 0.27,
+        "defending": 0.89,
+        "stamina": 0.73,
+        "star": false
+      },
+      {
+        "id": "RVA-3",
+        "name": "Kai Corrigan",
+        "short": "K. Corrigan",
+        "number": 3,
+        "position": "LB",
+        "pace": 0.87,
+        "passing": 0.69,
+        "shooting": 0.42,
+        "defending": 0.73,
+        "stamina": 0.55,
+        "star": false
+      },
+      {
+        "id": "RVA-4",
+        "name": "Rory Mwangi",
+        "short": "R. Mwangi",
+        "number": 4,
+        "position": "DM",
+        "pace": 0.58,
+        "passing": 0.79,
+        "shooting": 0.4,
+        "defending": 0.71,
+        "stamina": 0.74,
+        "star": false
+      },
+      {
+        "id": "RVA-8",
+        "name": "Leon Whitfield",
+        "short": "L. Whitfield",
+        "number": 8,
+        "position": "DM",
+        "pace": 0.64,
+        "passing": 0.85,
+        "shooting": 0.44,
+        "defending": 0.76,
+        "stamina": 0.56,
+        "star": false
+      },
+      {
+        "id": "RVA-10",
+        "name": "Felix Whitlock",
+        "short": "F. Whitlock",
+        "number": 10,
+        "position": "RW",
+        "pace": 0.84,
+        "passing": 0.69,
+        "shooting": 0.73,
+        "defending": 0.49,
+        "stamina": 0.61,
+        "star": false
+      },
+      {
+        "id": "RVA-7",
+        "name": "Oskar Coulter",
+        "short": "O. Coulter",
+        "number": 7,
+        "position": "AM",
+        "pace": 0.76,
+        "passing": 0.8899999999999999,
+        "shooting": 0.6799999999999999,
+        "defending": 0.39,
+        "stamina": 0.87,
+        "star": true
+      },
+      {
+        "id": "RVA-9",
+        "name": "Yusuf Mensah",
+        "short": "Y. Mensah",
+        "number": 9,
+        "position": "LW",
+        "pace": 0.97,
+        "passing": 0.73,
+        "shooting": 0.71,
+        "defending": 0.3,
+        "stamina": 0.74,
+        "star": false
+      },
+      {
+        "id": "RVA-11",
+        "name": "Pavel Dembe",
+        "short": "P. Dembe",
+        "number": 11,
+        "position": "ST",
+        "pace": 0.88,
+        "passing": 0.7,
+        "shooting": 0.81,
+        "defending": 0.33,
+        "stamina": 0.92,
+        "star": false
+      },
+      {
+        "id": "RVA-13",
+        "name": "Mateo Ferreira",
+        "short": "M. Ferreira",
+        "number": 13,
+        "position": "GK",
+        "pace": 0.29,
+        "passing": 0.54,
+        "shooting": 0.2,
+        "defending": 0.84,
+        "stamina": 0.85,
+        "star": false
+      },
+      {
+        "id": "RVA-15",
+        "name": "Tobi Lowry",
+        "short": "T. Lowry",
+        "number": 15,
+        "position": "CB",
+        "pace": 0.62,
+        "passing": 0.52,
+        "shooting": 0.22,
+        "defending": 0.97,
+        "stamina": 0.68,
+        "star": false
+      },
+      {
+        "id": "RVA-16",
+        "name": "Yusuf Sterling-Hope",
+        "short": "Y. Sterling-Hope",
+        "number": 16,
+        "position": "CM",
+        "pace": 0.64,
+        "passing": 0.85,
+        "shooting": 0.52,
+        "defending": 0.65,
+        "stamina": 0.85,
+        "star": false
+      },
+      {
+        "id": "RVA-17",
+        "name": "Ibrahim Santoro",
+        "short": "I. Santoro",
+        "number": 17,
+        "position": "RW",
+        "pace": 0.93,
+        "passing": 0.63,
+        "shooting": 0.74,
+        "defending": 0.31,
+        "stamina": 0.63,
+        "star": false
+      },
+      {
+        "id": "RVA-19",
+        "name": "Kenji Marchetti",
+        "short": "K. Marchetti",
+        "number": 19,
+        "position": "ST",
+        "pace": 0.82,
+        "passing": 0.69,
+        "shooting": 0.88,
+        "defending": 0.37,
+        "stamina": 0.9,
+        "star": false
+      }
+    ]
+  },
+  "period_starts": [
+    0.0,
+    2851.535786862742
+  ],
+  "period_ends": [
+    2851.535786862742,
+    5883.74864422137
+  ],
+  "duration": 5883.74864422137,
+  "anchors": {
+    "NBR-1": [
+      5,
+      34
+    ],
+    "NBR-2": [
+      30,
+      8
+    ],
+    "NBR-5": [
+      22,
+      24
+    ],
+    "NBR-6": [
+      22,
+      44
+    ],
+    "NBR-3": [
+      30,
+      60
+    ],
+    "NBR-4": [
+      40,
+      34
+    ],
+    "NBR-8": [
+      50,
+      20
+    ],
+    "NBR-10": [
+      50,
+      48
+    ],
+    "NBR-7": [
+      70,
+      9
+    ],
+    "NBR-9": [
+      76,
+      34
+    ],
+    "NBR-11": [
+      70,
+      59
+    ],
+    "RVA-1": [
+      5,
+      34
+    ],
+    "RVA-2": [
+      30,
+      8
+    ],
+    "RVA-5": [
+      22,
+      24
+    ],
+    "RVA-6": [
+      22,
+      44
+    ],
+    "RVA-3": [
+      30,
+      60
+    ],
+    "RVA-4": [
+      40,
+      26
+    ],
+    "RVA-8": [
+      40,
+      42
+    ],
+    "RVA-10": [
+      63,
+      10
+    ],
+    "RVA-7": [
+      60,
+      34
+    ],
+    "RVA-9": [
+      63,
+      58
+    ],
+    "RVA-11": [
+      76,
+      34
+    ],
+    "RVA-17": [
+      63,
+      10
+    ],
+    "RVA-15": [
+      30,
+      8
+    ],
+    "NBR-15": [
+      22,
+      24
+    ],
+    "RVA-16": [
+      30,
+      60
+    ],
+    "NBR-16": [
+      30,
+      60
+    ],
+    "NBR-19": [
+      76,
+      34
+    ]
+  }
+}

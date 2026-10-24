@@ -1,0 +1,8 @@
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-dotenv>=1.0
+openai>=1.40
+pytest>=8.0
+
+# Optional: forward live events to a Microsoft Fabric Eventstream
+# azure-eventhub>=5.11

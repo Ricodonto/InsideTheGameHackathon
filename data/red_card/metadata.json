@@ -1,0 +1,573 @@
+{
+  "match_id": "red_card-1",
+  "seed": 1,
+  "pitch": {
+    "length": 105.0,
+    "width": 68.0
+  },
+  "home": {
+    "id": "kingsport",
+    "name": "Kingsport United",
+    "short": "KSU",
+    "primary": "#f2a900",
+    "secondary": "#1a1a1a",
+    "formation": "4-4-2",
+    "press": 0.42,
+    "directness": 0.72,
+    "strength": 0.52,
+    "players": [
+      {
+        "id": "KSU-1",
+        "name": "Hugo Esposito",
+        "short": "H. Esposito",
+        "number": 1,
+        "position": "GK",
+        "pace": 0.37,
+        "passing": 0.43,
+        "shooting": 0.2,
+        "defending": 0.76,
+        "stamina": 0.72,
+        "star": false
+      },
+      {
+        "id": "KSU-2",
+        "name": "Jakub Mensah",
+        "short": "J. Mensah",
+        "number": 2,
+        "position": "RB",
+        "pace": 0.84,
+        "passing": 0.67,
+        "shooting": 0.33,
+        "defending": 0.69,
+        "stamina": 0.61,
+        "star": false
+      },
+      {
+        "id": "KSU-5",
+        "name": "Jakub Whitlock",
+        "short": "J. Whitlock",
+        "number": 5,
+        "position": "CB",
+        "pace": 0.52,
+        "passing": 0.62,
+        "shooting": 0.28,
+        "defending": 0.82,
+        "stamina": 0.77,
+        "star": false
+      },
+      {
+        "id": "KSU-6",
+        "name": "Joel Tembo",
+        "short": "J. Tembo",
+        "number": 6,
+        "position": "CB",
+        "pace": 0.53,
+        "passing": 0.53,
+        "shooting": 0.26,
+        "defending": 0.79,
+        "stamina": 0.62,
+        "star": false
+      },
+      {
+        "id": "KSU-3",
+        "name": "Ezra Lowry",
+        "short": "E. Lowry",
+        "number": 3,
+        "position": "LB",
+        "pace": 0.76,
+        "passing": 0.57,
+        "shooting": 0.35,
+        "defending": 0.81,
+        "stamina": 0.93,
+        "star": false
+      },
+      {
+        "id": "KSU-4",
+        "name": "Kofi Coulter",
+        "short": "K. Coulter",
+        "number": 4,
+        "position": "RM",
+        "pace": 0.81,
+        "passing": 0.63,
+        "shooting": 0.65,
+        "defending": 0.43,
+        "stamina": 0.55,
+        "star": false
+      },
+      {
+        "id": "KSU-8",
+        "name": "Zane Doherty",
+        "short": "Z. Doherty",
+        "number": 8,
+        "position": "CM",
+        "pace": 0.65,
+        "passing": 0.83,
+        "shooting": 0.56,
+        "defending": 0.58,
+        "stamina": 0.79,
+        "star": false
+      },
+      {
+        "id": "KSU-10",
+        "name": "Zane Barros",
+        "short": "Z. Barros",
+        "number": 10,
+        "position": "CM",
+        "pace": 0.63,
+        "passing": 0.79,
+        "shooting": 0.64,
+        "defending": 0.57,
+        "stamina": 0.56,
+        "star": false
+      },
+      {
+        "id": "KSU-7",
+        "name": "Elias Kowal",
+        "short": "E. Kowal",
+        "number": 7,
+        "position": "LM",
+        "pace": 0.79,
+        "passing": 0.69,
+        "shooting": 0.63,
+        "defending": 0.51,
+        "stamina": 0.62,
+        "star": false
+      },
+      {
+        "id": "KSU-9",
+        "name": "Leon Sterling-Hope",
+        "short": "L. Sterling-Hope",
+        "number": 9,
+        "position": "ST",
+        "pace": 0.9299999999999999,
+        "passing": 0.71,
+        "shooting": 0.94,
+        "defending": 0.3,
+        "stamina": 0.8,
+        "star": true
+      },
+      {
+        "id": "KSU-11",
+        "name": "Emil Hakimi-Roe",
+        "short": "E. Hakimi-Roe",
+        "number": 11,
+        "position": "ST",
+        "pace": 0.72,
+        "passing": 0.72,
+        "shooting": 0.84,
+        "defending": 0.24,
+        "stamina": 0.73,
+        "star": false
+      },
+      {
+        "id": "KSU-13",
+        "name": "Arlo Varga",
+        "short": "A. Varga",
+        "number": 13,
+        "position": "GK",
+        "pace": 0.32,
+        "passing": 0.59,
+        "shooting": 0.2,
+        "defending": 0.79,
+        "stamina": 0.79,
+        "star": false
+      },
+      {
+        "id": "KSU-15",
+        "name": "Nico Ashworth",
+        "short": "N. Ashworth",
+        "number": 15,
+        "position": "CB",
+        "pace": 0.58,
+        "passing": 0.61,
+        "shooting": 0.27,
+        "defending": 0.8,
+        "stamina": 0.85,
+        "star": false
+      },
+      {
+        "id": "KSU-16",
+        "name": "Mateo Okafor",
+        "short": "M. Okafor",
+        "number": 16,
+        "position": "CM",
+        "pace": 0.67,
+        "passing": 0.76,
+        "shooting": 0.46,
+        "defending": 0.5,
+        "stamina": 0.6,
+        "star": false
+      },
+      {
+        "id": "KSU-17",
+        "name": "Joel Abara",
+        "short": "J. Abara",
+        "number": 17,
+        "position": "RW",
+        "pace": 0.86,
+        "passing": 0.73,
+        "shooting": 0.66,
+        "defending": 0.43,
+        "stamina": 0.84,
+        "star": false
+      },
+      {
+        "id": "KSU-19",
+        "name": "Ibrahim Garnier",
+        "short": "I. Garnier",
+        "number": 19,
+        "position": "ST",
+        "pace": 0.81,
+        "passing": 0.62,
+        "shooting": 0.9,
+        "defending": 0.28,
+        "stamina": 0.95,
+        "star": false
+      }
+    ]
+  },
+  "away": {
+    "id": "ashford",
+    "name": "Ashford Rovers",
+    "short": "ASH",
+    "primary": "#127a4a",
+    "secondary": "#f4f4f4",
+    "formation": "4-3-3",
+    "press": 0.62,
+    "directness": 0.45,
+    "strength": 0.57,
+    "players": [
+      {
+        "id": "ASH-1",
+        "name": "Joel Thorne",
+        "short": "J. Thorne",
+        "number": 1,
+        "position": "GK",
+        "pace": 0.28,
+        "passing": 0.57,
+        "shooting": 0.2,
+        "defending": 0.81,
+        "stamina": 0.88,
+        "star": false
+      },
+      {
+        "id": "ASH-2",
+        "name": "Kwame Whitlock",
+        "short": "K. Whitlock",
+        "number": 2,
+        "position": "RB",
+        "pace": 0.83,
+        "passing": 0.67,
+        "shooting": 0.34,
+        "defending": 0.62,
+        "stamina": 0.7,
+        "star": false
+      },
+      {
+        "id": "ASH-5",
+        "name": "Tariq Corrigan",
+        "short": "T. Corrigan",
+        "number": 5,
+        "position": "CB",
+        "pace": 0.48,
+        "passing": 0.55,
+        "shooting": 0.32,
+        "defending": 0.84,
+        "stamina": 0.64,
+        "star": false
+      },
+      {
+        "id": "ASH-6",
+        "name": "Diego Valdez",
+        "short": "D. Valdez",
+        "number": 6,
+        "position": "CB",
+        "pace": 0.58,
+        "passing": 0.61,
+        "shooting": 0.2,
+        "defending": 0.9,
+        "stamina": 0.86,
+        "star": false
+      },
+      {
+        "id": "ASH-3",
+        "name": "Luca Juma",
+        "short": "L. Juma",
+        "number": 3,
+        "position": "LB",
+        "pace": 0.69,
+        "passing": 0.67,
+        "shooting": 0.31,
+        "defending": 0.7,
+        "stamina": 0.87,
+        "star": false
+      },
+      {
+        "id": "ASH-4",
+        "name": "Leon Marchetti",
+        "short": "L. Marchetti",
+        "number": 4,
+        "position": "DM",
+        "pace": 0.63,
+        "passing": 0.86,
+        "shooting": 0.5,
+        "defending": 0.7,
+        "stamina": 0.63,
+        "star": false
+      },
+      {
+        "id": "ASH-8",
+        "name": "Joel Delacroix",
+        "short": "J. Delacroix",
+        "number": 8,
+        "position": "CM",
+        "pace": 0.59,
+        "passing": 0.73,
+        "shooting": 0.5,
+        "defending": 0.56,
+        "stamina": 0.85,
+        "star": false
+      },
+      {
+        "id": "ASH-10",
+        "name": "Stefan Barros",
+        "short": "S. Barros",
+        "number": 10,
+        "position": "CM",
+        "pace": 0.69,
+        "passing": 0.82,
+        "shooting": 0.53,
+        "defending": 0.57,
+        "stamina": 0.75,
+        "star": false
+      },
+      {
+        "id": "ASH-7",
+        "name": "Pavel Brennan",
+        "short": "P. Brennan",
+        "number": 7,
+        "position": "RW",
+        "pace": 0.87,
+        "passing": 0.75,
+        "shooting": 0.7,
+        "defending": 0.37,
+        "stamina": 0.87,
+        "star": false
+      },
+      {
+        "id": "ASH-9",
+        "name": "Ollie Coulter",
+        "short": "O. Coulter",
+        "number": 9,
+        "position": "ST",
+        "pace": 0.81,
+        "passing": 0.59,
+        "shooting": 0.82,
+        "defending": 0.36,
+        "stamina": 0.93,
+        "star": false
+      },
+      {
+        "id": "ASH-11",
+        "name": "Malik Ibsen",
+        "short": "M. Ibsen",
+        "number": 11,
+        "position": "LW",
+        "pace": 0.97,
+        "passing": 0.79,
+        "shooting": 0.73,
+        "defending": 0.38,
+        "stamina": 0.65,
+        "star": true
+      },
+      {
+        "id": "ASH-13",
+        "name": "Rafael Tembo",
+        "short": "R. Tembo",
+        "number": 13,
+        "position": "GK",
+        "pace": 0.42,
+        "passing": 0.55,
+        "shooting": 0.2,
+        "defending": 0.84,
+        "stamina": 0.68,
+        "star": false
+      },
+      {
+        "id": "ASH-15",
+        "name": "Dani Fontaine",
+        "short": "D. Fontaine",
+        "number": 15,
+        "position": "CB",
+        "pace": 0.64,
+        "passing": 0.63,
+        "shooting": 0.34,
+        "defending": 0.85,
+        "stamina": 0.62,
+        "star": false
+      },
+      {
+        "id": "ASH-16",
+        "name": "Luca Pellegrini",
+        "short": "L. Pellegrini",
+        "number": 16,
+        "position": "CM",
+        "pace": 0.65,
+        "passing": 0.81,
+        "shooting": 0.54,
+        "defending": 0.63,
+        "stamina": 0.59,
+        "star": false
+      },
+      {
+        "id": "ASH-17",
+        "name": "Hugo Okafor",
+        "short": "H. Okafor",
+        "number": 17,
+        "position": "RW",
+        "pace": 0.77,
+        "passing": 0.8,
+        "shooting": 0.7,
+        "defending": 0.4,
+        "stamina": 0.83,
+        "star": false
+      },
+      {
+        "id": "ASH-19",
+        "name": "Stefan Petrov",
+        "short": "S. Petrov",
+        "number": 19,
+        "position": "ST",
+        "pace": 0.73,
+        "passing": 0.61,
+        "shooting": 0.81,
+        "defending": 0.31,
+        "stamina": 0.8,
+        "star": false
+      }
+    ]
+  },
+  "period_starts": [
+    0.0,
+    2840.525576773195
+  ],
+  "period_ends": [
+    2840.525576773195,
+    5762.80502236976
+  ],
+  "duration": 5762.80502236976,
+  "anchors": {
+    "KSU-1": [
+      5,
+      34
+    ],
+    "KSU-2": [
+      30,
+      8
+    ],
+    "KSU-5": [
+      22,
+      24
+    ],
+    "KSU-6": [
+      22,
+      44
+    ],
+    "KSU-3": [
+      30,
+      60
+    ],
+    "KSU-4": [
+      55,
+      10
+    ],
+    "KSU-8": [
+      46,
+      26
+    ],
+    "KSU-10": [
+      46,
+      42
+    ],
+    "KSU-7": [
+      55,
+      58
+    ],
+    "KSU-9": [
+      73,
+      28
+    ],
+    "KSU-11": [
+      73,
+      40
+    ],
+    "ASH-1": [
+      5,
+      34
+    ],
+    "ASH-2": [
+      30,
+      8
+    ],
+    "ASH-5": [
+      22,
+      24
+    ],
+    "ASH-6": [
+      22,
+      44
+    ],
+    "ASH-3": [
+      30,
+      60
+    ],
+    "ASH-4": [
+      40,
+      34
+    ],
+    "ASH-8": [
+      50,
+      20
+    ],
+    "ASH-10": [
+      50,
+      48
+    ],
+    "ASH-7": [
+      70,
+      9
+    ],
+    "ASH-9": [
+      76,
+      34
+    ],
+    "ASH-11": [
+      70,
+      59
+    ],
+    "KSU-16": [
+      46,
+      42
+    ],
+    "ASH-16": [
+      40,
+      34
+    ],
+    "ASH-15": [
+      40,
+      34
+    ],
+    "ASH-17": [
+      40,
+      34
+    ],
+    "KSU-15": [
+      46,
+      42
+    ],
+    "KSU-17": [
+      55,
+      10
+    ]
+  }
+}
