@@ -152,5 +152,5 @@ function StatRows({ rows, home, away }: { rows: (string | number)[][]; home: str
 }
 
 export function AiBadge({ o }: { o: Overlay }) {
-  return o.text.source === "llm" ? <span className="ai-badge" title="Written by the Foundry model from the facts above">AI</span> : null;
+  return o.text.source === "llm" ? <span className="ai-badge" title="Written by the AI model from the computed facts">AI</span> : null;
 }

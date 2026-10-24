@@ -41,6 +41,7 @@ export interface Meta {
     period_ends: number[];
   };
   llm: boolean;
+  llm_provider: string | null; // "Foundry" or "GitHub Models"
   fabric: boolean;
 }
 

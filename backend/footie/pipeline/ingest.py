@@ -32,10 +32,12 @@ class MatchFeed:
 
     def advance_to(self, t: float) -> tuple[list[dict], list[dict]]:
         """Everything that happened in (previous t, t]: events and tracking frames."""
+        at_end = t >= self.match.duration
         t = min(t, self.match.duration)
         events: list[dict] = []
         evs = self.match.events
-        while self._ei < len(evs) and evs[self._ei]["t"] <= t:
+        # Event times are rounded to 0.01 s, so the final whistle can sit a hair past `duration`.
+        while self._ei < len(evs) and (at_end or evs[self._ei]["t"] <= t):
             events.append(evs[self._ei])
             self._ei += 1
         frames: list[dict] = []

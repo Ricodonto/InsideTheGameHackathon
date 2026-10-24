@@ -91,3 +91,9 @@ def test_every_language_renders(session, lang):
         if p:
             assert "{" not in p["text"]["headline"], p["text"]
             assert "{" not in p["text"].get("body", ""), p["text"]
+
+
+def test_full_time_is_reached(session):
+    assert session.state()["finished"]
+    recaps = [i for i in session.insights.values() if i["kind"] == "recap"]
+    assert [r["facts"]["final"] for r in recaps] == [False, True]

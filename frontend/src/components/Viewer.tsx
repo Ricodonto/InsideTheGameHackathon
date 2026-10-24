@@ -137,14 +137,14 @@ export function Viewer(props: Props) {
               <Feed overlays={overlays} onReplay={props.onReplay} title="Moments" />
             </>
           )}
-          <AskBox answers={props.answers} onAsk={props.onAsk} suggestions={SUGGESTIONS[profile.mode]} llm={meta.llm} />
+          <AskBox answers={props.answers} onAsk={props.onAsk} suggestions={SUGGESTIONS[profile.mode]} provider={meta.llm ? meta.llm_provider : null} />
         </div>
       )}
     </section>
   );
 }
 
-function AskBox({ answers, onAsk, suggestions, llm }: { answers: Answer[]; onAsk: (q: string) => void; suggestions: string[]; llm: boolean }) {
+function AskBox({ answers, onAsk, suggestions, provider }: { answers: Answer[]; onAsk: (q: string) => void; suggestions: string[]; provider: string | null }) {
   const [q, setQ] = useState("");
   const submit = (text: string) => {
     if (!text.trim()) return;
@@ -155,7 +155,7 @@ function AskBox({ answers, onAsk, suggestions, llm }: { answers: Answer[]; onAsk
     <div className="card ask">
       <div className="card-head">
         <span>Ask the match</span>
-        <span className="hint">{llm ? "answered by the Foundry model from live data" : "rule-based answers (add Foundry keys for AI)"}</span>
+        <span className="hint">{provider ? `answered by AI (${provider}) from live data` : "rule-based answers (add AI keys in .env)"}</span>
       </div>
       <form
         onSubmit={(e) => {

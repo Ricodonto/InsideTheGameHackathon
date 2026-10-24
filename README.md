@@ -139,6 +139,8 @@ Copy `backend/.env.example` to `backend/.env` and fill in what you have. Restart
 2. Copy the Azure OpenAI endpoint, key and deployment name into `.env`:
    `AZURE_OPENAI_ENDPOINT`, `AZURE_OPENAI_API_KEY`, `AZURE_OPENAI_DEPLOYMENT`.
 
+**No Azure subscription?** Any OpenAI-compatible API also works: set `OPENAI_API_KEY`, `OPENAI_MODEL` and, for providers other than OpenAI, `OPENAI_BASE_URL`. If both are set, Foundry wins. (GitHub Models was retired in July 2026 and is not an option.)
+
 What changes: key moments, alerts and recaps first appear with template text, then upgrade to model-written text a moment later (marked **AI**). The model is given only the computed facts and reason codes, and is told not to invent anything. "Ask the match" answers from the live match state and cites moment ids. Template text remains the fallback if the model is slow or fails.
 
 ### Microsoft Fabric (live event store)

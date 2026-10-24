@@ -39,12 +39,14 @@ from footie.pipeline.runner import MatchSession  # noqa: E402
 from footie.sim.scenarios import SCENARIOS, load_match  # noqa: E402
 
 logging.basicConfig(level=logging.INFO)
+logging.getLogger("azure").setLevel(logging.WARNING)  # the Event Hubs client logs every AMQP link change
 log = logging.getLogger("footie")
 
 app = FastAPI(title="FootieManager", version="0.1.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
 NARRATOR = Narrator()
+LLM_PROVIDER = NARRATOR.llm.provider if NARRATOR.llm else None
 FABRIC_ENABLED = bool(os.getenv("FABRIC_EVENTSTREAM_CONNECTION_STRING"))
 TICK = 0.1  # seconds of wall time per server tick
 
@@ -61,7 +63,7 @@ async def warm_cache() -> None:
 
 @app.get("/api/health")
 def health() -> dict:
-    return {"ok": True, "llm": NARRATOR.enabled, "fabric": FABRIC_ENABLED}
+    return {"ok": True, "llm": NARRATOR.enabled, "llm_provider": LLM_PROVIDER, "fabric": FABRIC_ENABLED}
 
 
 @app.get("/api/scenarios")
@@ -103,6 +105,7 @@ def _meta_message(scenario: str, m) -> dict:
         "scenario": SCENARIOS[scenario].summary(),
         "match": meta,
         "llm": NARRATOR.enabled,
+        "llm_provider": LLM_PROVIDER,
         "fabric": FABRIC_ENABLED,
     }
 

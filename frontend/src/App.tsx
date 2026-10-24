@@ -122,8 +122,8 @@ export default function App() {
         </div>
         <div className="badges">
           <span className={`badge ${connected ? "on" : "off"}`}>{connected ? "Live" : "Connecting…"}</span>
-          <span className={`badge ${meta?.llm ? "on" : "off"}`} title="Microsoft Foundry model for narration and Q&A">
-            Foundry {meta?.llm ? "on" : "off"}
+          <span className={`badge ${meta?.llm ? "on" : "off"}`} title="AI model for narration and Q&A">
+            {meta?.llm_provider ?? "AI"} {meta?.llm ? "on" : "off"}
           </span>
           <span className={`badge ${meta?.fabric ? "on" : "off"}`} title="Events forwarded to a Fabric Eventstream">
             Fabric {meta?.fabric ? "on" : "off"}
